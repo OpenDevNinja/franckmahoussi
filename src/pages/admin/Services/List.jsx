@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
-import { services } from '../../../../data/services';
+import { services } from '../../../data/services';
 
 const ServiceList = () => {
   const [serviceList, setServiceList] = useState([]);

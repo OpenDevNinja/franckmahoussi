@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
-import { products } from '../../../../data/products';
+import { products } from '../../../data/products'; // Assurez-vous que le chemin est correct
 
 const ProductList = () => {
   const [productList, setProductList] = useState([]);

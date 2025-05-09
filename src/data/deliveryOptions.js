@@ -1,66 +1,78 @@
+// deliveryOptions.js
 export const deliveryOptions = [
-    {
-      id: 1,
-      name: "Standard",
-      description: "Livraison en 3-5 jours ouvrables",
-      price: 4.99,
-      deliveryTime: "3-5 jours",
-      features: [
-        "Suivi de colis",
-        "Assurance basique",
-        "Livraison en point relais"
-      ]
-    },
-    {
-      id: 2,
-      name: "Express",
-      description: "Livraison en 1-2 jours ouvrables",
-      price: 9.99,
-      deliveryTime: "1-2 jours",
-      features: [
-        "Suivi en temps réel",
-        "Assurance standard",
-        "Livraison à domicile",
-        "Prioritaire"
-      ]
-    },
-    {
-      id: 3,
-      name: "Same-Day",
-      description: "Livraison le jour même",
-      price: 19.99,
-      deliveryTime: "Le jour même",
-      features: [
-        "Suivi en direct",
-        "Assurance premium",
-        "Livraison express",
-        "Fenêtre horaire",
-        "Service premium"
-      ]
-    },
-    {
-      id: 4,
-      name: "International Standard",
-      description: "Livraison internationale en 7-10 jours",
-      price: 24.99,
-      deliveryTime: "7-10 jours",
-      features: [
-        "Suivi international",
-        "Dédouanement inclus",
-        "Assurance standard"
-      ]
-    },
-    {
-      id: 5,
-      name: "International Express",
-      description: "Livraison internationale en 3-5 jours",
-      price: 49.99,
-      deliveryTime: "3-5 jours",
-      features: [
-        "Suivi prioritaire",
-        "Dédouanement accéléré",
-        "Assurance premium",
-        "Livraison express"
-      ]
-    }
-  ];
+  {
+    id: 1,
+    name: "Standard",
+    description: "Livraison économique en 3-5 jours ouvrables",
+    price: 1000.00,
+    deliveryTime: "3-5 jours",
+    icon: "🚛",
+    features: [
+      "Suivi de colis basique",
+      "Assurance 100%",
+      "Livraison en point relais",
+      "Emballage standard"
+    ]
+  },
+  {
+    id: 2,
+    name: "Express",
+    description: "Livraison rapide en 1-2 jours ouvrables",
+    price: 1500.00,
+    deliveryTime: "1-2 jours",
+    icon: "✈️",
+    recommended: true,
+    features: [
+     
+      "Assurance 100%",
+      "Livraison à domicile",
+      "Emballage renforcé",
+      "Service client prioritaire"
+    ]
+  },
+  {
+    id: 3,
+    name: "Premium",
+    description: "Livraison le jour même pour les urgences",
+    price: 2000.00,
+    deliveryTime: "Le jour même",
+    icon: "⚡",
+    features: [
+      "Suivi GPS en direct",
+      "Assurance 100%",
+      "Livraison express en 2h",
+      "Fenêtre horaire de 1h",
+      "Service client dédié",
+      "Emballage premium"
+    ]
+  },
+/*   {
+    id: 4,
+    name: "International Standard",
+    description: "Livraison économique à l'international",
+    price: 24.99,
+    deliveryTime: "7-10 jours",
+    icon: "🌍",
+    features: [
+      "Suivi international",
+      "Dédouanement inclus",
+      "Assurance jusqu'à 200€",
+      "Documents d'export fournis"
+    ]
+  },
+  {
+    id: 5,
+    name: "International Express",
+    description: "Livraison rapide à l'international",
+    price: 49.99,
+    deliveryTime: "3-5 jours",
+    icon: "🚀",
+    features: [
+      "Suivi prioritaire 24/7",
+      "Dédouanement accéléré",
+      "Assurance jusqu'à 1000€",
+      "Service client international",
+      "Documents d'export premium"
+    ]
+  } */
+];

@@ -7,7 +7,7 @@ const About = () => {
   const location = useLocation();
 
   useEffect(() => {
-    document.title = "À propos | EliteShop";
+    document.title = "À propos | F M Services";
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -43,7 +43,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center"
         >
-          <h1 className="text-4xl font-bold mb-4">À propos de EliteShop</h1>
+          <h1 className="text-4xl font-bold mb-4">À propos de F M Services</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Découvrez notre histoire, notre mission et les valeurs qui nous animent.
           </p>
@@ -59,7 +59,7 @@ const About = () => {
           <h2 className="text-2xl font-bold mb-4">Notre Histoire</h2>
           <div className="prose max-w-none text-gray-700">
             <p>
-              Fondé en 2015, EliteShop est né de la passion pour la technologie et l'innovation. 
+              Fondé en 2015, F M Services est né de la passion pour la technologie et l'innovation. 
               Ce qui a commencé comme une petite boutique en ligne s'est rapidement transformé en 
               une référence dans le domaine des produits high-tech et des services spécialisés.
             </p>

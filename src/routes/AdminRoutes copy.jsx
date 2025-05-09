@@ -22,7 +22,7 @@ const AdminRoutes = () => {
     <Suspense fallback={<Loading />}> 
       <Routes>
         <Route path="login" element={<Login />} />
-       
+        <Route element={<RequireAuth />}>
           <Route element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="products" element={<ProductList />} />
@@ -35,9 +35,9 @@ const AdminRoutes = () => {
             <Route path="users" element={<Users />} />
             <Route path="settings" element={<Settings />} />
           </Route>
-        
+        </Route>
       </Routes>
-    </Suspense> 
+    </Suspense>
   );
 };
 

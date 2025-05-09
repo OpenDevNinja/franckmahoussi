@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { testimonials } from '../../data/testimonials';
+import SectionHeader from './SectionHeader';
 
 const Testimonials = ({ testimonials }) => {
   return (
@@ -12,10 +13,12 @@ const Testimonials = ({ testimonials }) => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-4">Ce que disent nos clients</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez les témoignages de nos clients satisfaits à travers le monde.
-          </p>
+
+          <SectionHeader
+  title="Ce que disent nos client"
+  subtitle="   Découvrez les témoignages de nos clients satisfaits à travers le monde."
+  animationDelay={0.2}
+/>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ServiceCard from '../../components/services/ServiceCard';
 import { services } from '../../data/services';
+import SectionHeader from '../../components/home/SectionHeader';
 
 const Services = () => {
   const location = useLocation();
@@ -16,7 +17,7 @@ const Services = () => {
   ];
 
   useEffect(() => {
-    document.title = "Services | EliteShop";
+    document.title = "Services | F M Services";
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -27,17 +28,14 @@ const Services = () => {
   return (
     <div className="py-12 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 text-center"
-        >
-          <h1 className="text-4xl font-bold mb-4">Nos Services</h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Découvrez nos services premium pour répondre à tous vos besoins technologiques.
-          </p>
-        </motion.div>
+  
+        
+        <SectionHeader
+  title="Nos Services "
+  subtitle="Découvrez nos services premium pour répondre à tous vos besoins technologiques. "
+  animationDelay={0.2}
+/>
+    
         
         <motion.div
           initial={{ opacity: 0 }}

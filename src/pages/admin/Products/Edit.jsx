@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaSave } from 'react-icons/fa';
-import { products } from '../../../../data/products';
+import { products } from '../../../data/products'; // Assurez-vous que le chemin est correct
 
 const ProductEdit = () => {
   const { id } = useParams();

@@ -5,7 +5,7 @@ import { FaHome, FaSearch } from 'react-icons/fa';
 
 const NotFound = () => {
   useEffect(() => {
-    document.title = "Page non trouvée | EliteShop";
+    document.title = "Page non trouvée | F M Services";
   }, []);
 
   return (

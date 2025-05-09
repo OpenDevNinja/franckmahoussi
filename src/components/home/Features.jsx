@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaShieldAlt, FaRocket, FaHeadset, FaMoneyBillWave } from 'react-icons/fa';
+import SectionHeader from './SectionHeader';
 
 const features = [
   {
@@ -28,19 +29,11 @@ const Features = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl font-bold mb-4">Pourquoi choisir EliteShop?</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Nous combinons qualité, rapidité et expertise pour une expérience client exceptionnelle.
-          </p>
-        </motion.div>
-        
+      <SectionHeader
+  title="Pourquoi choisir F M Services?"
+  subtitle="Nous combinons qualité, rapidité et expertise pour une expérience client exceptionnelle."
+  animationDelay={0.2}
+/>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <motion.div

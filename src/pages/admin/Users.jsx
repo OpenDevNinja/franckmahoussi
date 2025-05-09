@@ -5,8 +5,8 @@ import { FaSearch, FaEdit, FaTrash, FaUserPlus } from 'react-icons/fa';
 const mockUsers = [
   {
     id: 1,
-    name: 'Admin EliteShop',
-    email: 'admin@eliteshop.com',
+    name: 'Admin F M Services',
+    email: 'admin@fmservices.com',
     role: 'Admin',
     joined: '2022-01-15'
   },

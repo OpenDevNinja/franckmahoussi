@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { FaBox, FaUsers, FaShoppingCart, FaChartLine } from 'react-icons/fa';
-import { products } from '../../../data/products';
-import { services } from '../../../data/services';
-import { testimonials } from '../../../data/testimonials';
+import { products } from '../../data/products';
+import { services } from '../../data/services';
+import { testimonials } from '../../data/testimonials';
 
 const Dashboard = () => {
   useEffect(() => {
-    document.title = "Tableau de bord | Admin EliteShop";
+    document.title = "Tableau de bord | Admin F M Services";
   }, []);
 
   const stats = [

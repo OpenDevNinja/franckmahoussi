@@ -13,7 +13,7 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    document.title = "Contact | EliteShop";
+    document.title = "Contact | F M Services";
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -154,7 +154,7 @@ const Contact = () => {
                   <FaEnvelope className="text-primary-600 text-xl mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="font-medium text-lg">Email</h3>
-                    <p className="text-gray-600">contact@eliteshop.com</p>
+                    <p className="text-gray-600">contact@fmservices.com</p>
                   </div>
                 </div>
               </div>

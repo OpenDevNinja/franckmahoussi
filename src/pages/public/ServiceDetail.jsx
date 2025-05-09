@@ -10,9 +10,9 @@ const ServiceDetail = () => {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.title} | EliteShop`;
+      document.title = `${service.title} | F M Services`;
     } else {
-      document.title = "Service non trouvé | EliteShop";
+      document.title = "Service non trouvé | F M Services";
     }
     window.scrollTo(0, 0);
   }, [service]);

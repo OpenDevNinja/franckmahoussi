@@ -10,9 +10,9 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (product) {
-      document.title = `${product.name} | EliteShop`;
+      document.title = `${product.name} | F M Services`;
     } else {
-      document.title = "Produit non trouvé | EliteShop";
+      document.title = "Produit non trouvé | F M Services";
     }
     window.scrollTo(0, 0);
   }, [product]);

@@ -3,9 +3,9 @@ import { FaSave } from 'react-icons/fa';
 
 const Settings = () => {
   const [formData, setFormData] = useState({
-    siteName: 'EliteShop',
-    siteEmail: 'contact@eliteshop.com',
-    whatsappNumber: '+33123456789',
+    siteName: 'F M Services',
+    siteEmail: 'admin@fmservices.com',
+    whatsappNumber: '+229 0140302244',
     maintenanceMode: false,
     currency: 'EUR',
     taxRate: 20

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaArrowLeft, FaSave } from 'react-icons/fa';
-import { services } from '../../../../data/services';
+import { services } from '../../../data/services';
 
 const ServiceEdit = () => {
   const { id } = useParams();

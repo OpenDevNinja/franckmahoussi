@@ -20,11 +20,11 @@ export const AuthProvider = ({ children }) => {
   const login = (email, password) => {
     // Ici, vous feriez normalement une requête à votre API
     // Pour cet exemple, nous utilisons des identifiants codés en dur
-    if (email === 'admin@eliteshop.com' && password === 'admin123') {
+    if (email === 'admin@fmservices.com' && password === 'admin123') {
       const userData = {
         id: 1,
         email,
-        name: 'Admin EliteShop',
+        name: 'Admin F M Services',
         role: 'admin'
       };
       setUser(userData);

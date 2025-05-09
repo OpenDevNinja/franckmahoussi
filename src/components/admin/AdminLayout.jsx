@@ -21,7 +21,7 @@ const AdminLayout = () => {
       {/* Sidebar */}
       <div className="w-64 bg-dark-800 text-white fixed h-full">
         <div className="p-4 border-b border-dark-700">
-          <h1 className="text-xl font-bold">Admin EliteShop</h1>
+          <h1 className="text-xl font-bold">Admin F M Services</h1>
           <p className="text-sm text-gray-400">Bienvenue, {user.name}</p>
         </div>
         

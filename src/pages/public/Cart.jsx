@@ -8,7 +8,7 @@ import CartEmpty from '../../components/cart/CartEmpty';
 
 const Cart = () => {
   useEffect(() => {
-    document.title = "Panier | EliteShop";
+    document.title = "Panier | F M Services";
   }, []);
 
   const { 
