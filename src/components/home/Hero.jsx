@@ -322,7 +322,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
           >
             <motion.a 
-              href="#services" 
+              href="/services" 
               className="relative overflow-hidden group bg-gradient-to-r from-accent-600 to-primary-600 hover:from-accent-700 hover:to-primary-700 text-light-50 px-8 py-4 rounded-xl font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -2 }}
               whileTap={{ y: 1 }}
@@ -334,7 +334,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a 
-              href="#crypto" 
+              href="/verification"
               className="relative overflow-hidden group bg-secondary-600 hover:bg-secondary-700 border border-neutral-700 text-light-50 px-8 py-4 rounded-xl font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -2 }}
               whileTap={{ y: 1 }}

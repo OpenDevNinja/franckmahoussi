@@ -164,7 +164,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-6">Support instantané</h2>
               <p className="mb-6">Pour une assistance immédiate, contactez-nous via WhatsApp :</p>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/+22940302244"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"

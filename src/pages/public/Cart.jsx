@@ -22,7 +22,7 @@ const Cart = () => {
   } = useCart();
 
   const handleWhatsAppRedirect = () => {
-    const phoneNumber = "1234567890"; // Remplacez par votre numéro WhatsApp
+    const phoneNumber = "+22940302244"; // Remplacez par votre numéro WhatsApp
     const message = `Bonjour, je souhaite passer commande:\n\n${cart.items.map(item => 
       `- ${item.name} (x${item.quantity}): ${item.price * item.quantity}€`
     ).join('\n')}\n\nTotal: ${grandTotal}€\n\nLivraison: ${cart.delivery?.name || 'Non sélectionnée'}`;
