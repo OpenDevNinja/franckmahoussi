@@ -322,13 +322,14 @@ const Hero = () => {
             className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
           >
             <motion.a 
-              href="/services" 
+              href="https://www.sidrachain.com/" 
               className="relative overflow-hidden group bg-gradient-to-r from-accent-600 to-primary-600 hover:from-accent-700 hover:to-primary-700 text-light-50 px-8 py-4 rounded-xl font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -2 }}
               whileTap={{ y: 1 }}
+              target='_blank'
             >
               <span className="relative z-10 flex items-center">
-                Découvrir nos services <FaArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
+                Vous n'avez pas une compte SIDRA ? <FaArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-primary-600 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </motion.a>
@@ -340,7 +341,7 @@ const Hero = () => {
               whileTap={{ y: 1 }}
             >
               <span className="relative z-10 flex items-center">
-                Vérification Crypto <FaShieldAlt className="ml-3 group-hover:rotate-12 transition-transform" />
+                Demande de verification <FaShieldAlt className="ml-3 group-hover:rotate-12 transition-transform" />
               </span>
               <span className="absolute inset-0 bg-light-50/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </motion.a>

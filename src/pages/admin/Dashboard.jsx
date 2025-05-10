@@ -20,7 +20,7 @@ const Dashboard = () => {
   const recentTestimonials = [...testimonials].slice(0, 3);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 p-6">
       <h1 className="text-2xl font-bold">Tableau de bord</h1>
       
       {/* Stats Cards */}

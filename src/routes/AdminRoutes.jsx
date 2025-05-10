@@ -19,25 +19,31 @@ const Login = lazy(() => import('../pages/admin/Login'));
 
 const AdminRoutes = () => {
   return (
-    <Suspense fallback={<Loading />}> 
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="login" element={<Login />} />
-       
-          <Route element={<AdminLayout />}>
-            <Route index element={<Dashboard />} />
-            <Route path="products" element={<ProductList />} />
-            <Route path="products/add" element={<ProductAdd />} />
-            <Route path="products/edit/:id" element={<ProductEdit />} />
-            <Route path="services" element={<ServiceList />} />
-            <Route path="services/add" element={<ServiceAdd />} />
-            <Route path="services/edit/:id" element={<ServiceEdit />} />
-            <Route path="orders" element={<Orders />} />
-            <Route path="users" element={<Users />} />
-            <Route path="settings" element={<Settings />} />
-          </Route>
         
+        {/* Routes protégées */}
+        <Route
+          element={
+            <RequireAuth>
+              <AdminLayout />
+            </RequireAuth>
+          }
+        >
+          <Route index element={<Dashboard />} />
+          <Route path="products" element={<ProductList />} />
+          <Route path="products/add" element={<ProductAdd />} />
+          <Route path="products/edit/:id" element={<ProductEdit />} />
+          <Route path="services" element={<ServiceList />} />
+          <Route path="services/add" element={<ServiceAdd />} />
+          <Route path="services/edit/:id" element={<ServiceEdit />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="users" element={<Users />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
       </Routes>
-    </Suspense> 
+    </Suspense>
   );
 };
 

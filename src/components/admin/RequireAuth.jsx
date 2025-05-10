@@ -1,3 +1,4 @@
+// RequireAuth.js
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -17,11 +18,8 @@ const RequireAuth = ({ children }) => {
     return <Loading />;
   }
 
-  if (!user) {
-    return null; // Redirection gérée par useEffect
-  }
-
-  return children;
+  // Retourne les enfants seulement si l'utilisateur est connecté
+  return user ? children : null;
 };
 
 export default RequireAuth;
