@@ -5,6 +5,7 @@ import ProductGrid from '../../components/products/ProductGrid';
 import Filters from '../../components/products/Filters';
 import { products } from '../../data/products';
 import SectionHeader from '../../components/home/SectionHeader';
+import Hemelt from '../../components/common/Hemelt';
 
 const Products = () => {
   const location = useLocation();
@@ -29,27 +30,20 @@ const Products = () => {
   };
 
   return (
-    <div className="py-12 bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-4">
-   
+    <div className=" bg-gray-50 min-h-screen">
 
-        <SectionHeader
-  title="Nos Produits "
-  subtitle="  Découvrez notre sélection exclusive de produits high-tech et accessoires premium. "
-  animationDelay={0.2}
-/>
+
+       {/* helmet */}
+        <Hemelt
+         title="Nos Produits"
+         subtitle="Découvrez notre sélection exclusive de produits high-tech et accessoires premium."
+        />
+      <div className="container mx-auto px-4">
+  
         
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex mt-10 flex-col lg:flex-row gap-8">
           <div className="lg:w-full ">
-            <Filters categories={categories} onFilter={handleFilter} />
-            {filteredProducts.length > 0 ? (
-              <ProductGrid products={filteredProducts} />
-            ) : (
-              <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-                <h3 className="text-xl font-medium mb-2">Aucun produit trouvé</h3>
-                <p className="text-gray-600">Essayez d'ajuster vos filtres de recherche.</p>
-              </div>
-            )}
+            <ProductGrid products={filteredProducts} />
           </div>
         </div>
       </div>

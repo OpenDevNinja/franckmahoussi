@@ -41,23 +41,37 @@ const Header = () => {
             >
               Accueil
             </NavLink>
+             <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `font-medium ${isActive ? "text-primary-600" : "text-dark-700 hover:text-primary-600"} transition-colors`
+              } 
+            >
+              À Propos
+            </NavLink>
             <NavLink 
               to="/products" 
               className={({ isActive }) => `font-medium ${isActive ? 'text-primary-600' : 'text-dark-700 hover:text-primary-600'} transition-colors`}
             >
               Produits
             </NavLink>
-            <NavLink 
+            {/* <NavLink 
               to="/services" 
               className={({ isActive }) => `font-medium ${isActive ? 'text-primary-600' : 'text-dark-700 hover:text-primary-600'} transition-colors`}
             >
               Services
-            </NavLink>
+            </NavLink> */}
             <NavLink 
-              to="/crypto-courses" 
+              to="/crypto-trending" 
               className={({ isActive }) => `font-medium ${isActive ? 'text-primary-600' : 'text-dark-700 hover:text-primary-600'} transition-colors`}
             >
-              Formations Crypto
+               Cryptos
+            </NavLink>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) => `font-medium ${isActive ? 'text-primary-600' : 'text-dark-700 hover:text-primary-600'} transition-colors`}
+            >
+              Blogs
             </NavLink>
             <NavLink 
               to="/delivery" 
@@ -65,6 +79,12 @@ const Header = () => {
             >
               Livraison
             </NavLink>
+            <NavLink 
+              to="/contact" 
+              className={({ isActive }) => `font-medium ${isActive ? 'text-primary-600' : 'text-dark-700 hover:text-primary-600'} transition-colors`}
+            >
+              Contact
+              </NavLink>
           </nav>
 
           {/* Mobile Menu Button */}

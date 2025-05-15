@@ -14,27 +14,37 @@ const Delivery = lazy(() => import('../pages/public/Delivery'));
 const Cart = lazy(() => import('../pages/public/Cart'));
 const About = lazy(() => import('../pages/public/About'));
 const Contact = lazy(() => import('../pages/public/Contact'));
+const Blog = lazy(() => import('../pages/public/Blog'));
+const BlogDetail = lazy(() => import('../pages/public/BlogDetail'));
+const TrendingCryptos = lazy(() => import('../pages/public/TrendingCryptos'));
+
 const NotFound = lazy(() => import('../pages/public/NotFound'));
 
 const PublicRoutes = () => {
     return (
-<Suspense fallback={<Loading />}>
-        <Routes >
-            <Route element={<Layout />} >
-                <Route index element={<Home />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/products/:id" element={<ProductDetail />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/:id" element={<ServiceDetail />} />
-                <Route path="/crypto-courses" element={<CryptoCourses />} />
-                <Route path="/delivery" element={<Delivery />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path= "/verification" element={<CryptoVerification />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="*" element={<NotFound />} />
-            </Route>
-        </Routes >
+        <Suspense fallback={<Loading />}>
+            <Routes >
+                <Route element={<Layout />} >
+                    <Route index element={<Home />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/products/:id" element={<ProductDetail />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/services/:id" element={<ServiceDetail />} />
+                    <Route path="/crypto-courses" element={<CryptoCourses />} />
+                    <Route path="/delivery" element={<Delivery />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/verification" element={<CryptoVerification />} />
+
+
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:slug" element={<BlogDetail />} />
+                    <Route path="/crypto-trending" element={<TrendingCryptos />} />
+
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes >
         </Suspense>
     );
 };

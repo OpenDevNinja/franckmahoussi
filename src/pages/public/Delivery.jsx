@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { deliveryOptions } from '../../data/deliveryOptions';
 import SectionHeader from '../../components/home/SectionHeader';
 import { CheckCircleIcon, StarIcon, ArrowRightIcon, TruckIcon, RocketLaunchIcon, GlobeAltIcon, BoltIcon } from '@heroicons/react/24/solid';
+import Hemelt from '../../components/common/Hemelt';
 
 const iconComponents = {
   '🚛': TruckIcon,
@@ -118,13 +119,14 @@ const Delivery = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-25 to-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <SectionHeader
-          title="Nos Solutions de Livraison"
-          subtitle="Choisissez l'option qui correspond à vos besoins"
-          animationDelay={0.2}
+
+       {/* helmet */}
+        <Hemelt
+         title="Nos Solutions de Livraison"
+         subtitle="Choisissez l'option qui correspond à vos besoins"
         />
-        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
