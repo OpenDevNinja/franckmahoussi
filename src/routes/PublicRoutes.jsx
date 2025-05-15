@@ -33,9 +33,8 @@ const PublicRoutes = () => {
                     <Route path="/crypto-courses" element={<CryptoCourses />} />
                     <Route path="/delivery" element={<Delivery />} />
                     <Route path="/cart" element={<Cart />} />
-                    <Route path="/verification" element={<CryptoVerification />} />
-
-
+                    
+                    <Route path="/verify" element={<CryptoVerification />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/:slug" element={<BlogDetail />} />
                     <Route path="/crypto-trending" element={<TrendingCryptos />} />

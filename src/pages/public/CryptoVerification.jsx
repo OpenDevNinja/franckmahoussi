@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaShieldAlt, FaCheckCircle, FaWhatsapp, FaClock, FaUserShield, FaChartLine } from 'react-icons/fa';
 import { SiBitcoin, SiEthereum } from 'react-icons/si';

@@ -334,8 +334,8 @@ const Hero = () => {
               <span className="absolute inset-0 bg-gradient-to-r from-primary-600 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </motion.a>
             
-            <a 
-              href="/verification"
+            <motion.a 
+              href="/verify"
               className="relative overflow-hidden group bg-secondary-600 hover:bg-secondary-700 border border-neutral-700 text-light-50 px-8 py-4 rounded-xl font-bold flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ y: -2 }}
               whileTap={{ y: 1 }}
@@ -344,7 +344,7 @@ const Hero = () => {
                 Demande de verification <FaShieldAlt className="ml-3 group-hover:rotate-12 transition-transform" />
               </span>
               <span className="absolute inset-0 bg-light-50/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </a>
+            </motion.a>
           </motion.div>
 
           {/* Features grid */}
