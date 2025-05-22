@@ -6,7 +6,11 @@ export const services = [
       price: 199.99,
       duration: "8 heures",
       format: "En ligne ou en présentiel",
-      image: "https://images.unsplash.com/photo-1639762681057-408e52192e55",
+      image:[
+         "https://images.unsplash.com/photo-1639762681057-408e52192e55",
+         "https://images.unsplash.com/photo-1639762681057-408e52192e5g",
+          "https://images.unsplash.com/photo-1639762681057-408e52192e5d"
+      ],
       features: [
         "Comprendre la blockchain",
         "Création d'un portefeuille sécurisé",
@@ -24,7 +28,11 @@ export const services = [
       price: 499.99,
       duration: "20 heures",
       format: "En ligne",
-      image: "https://images.unsplash.com/photo-1642790553371-f1a1cc43a60a",
+      image: [
+        "https://images.unsplash.com/photo-1642790553371-f1a1cc43a60a",
+        "https://images.unsplash.com/photo-1642790553371-f1a1cc43a60b",
+        "https://images.unsplash.com/photo-1642790553371-f1a1cc43a60c"
+      ],  
       features: [
         "Analyse technique approfondie",
         "Stratégies de trading",

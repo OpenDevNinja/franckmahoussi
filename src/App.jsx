@@ -1,5 +1,5 @@
 import {  Routes, Route } from 'react-router-dom';
-import { HashRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { CartProvider } from './contexts/CartContext';
 import PublicRoutes from './routes/PublicRoutes';
 import AdminRoutes from './routes/AdminRoutes';

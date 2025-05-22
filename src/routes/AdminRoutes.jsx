@@ -4,6 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 import RequireAuth from '../components/admin/RequireAuth';
 import AdminLayout from '../components/admin/AdminLayout';
 import Loading from '../components/common/Loading';
+import BlogList from '../pages/admin/blog/List';
+import BlogAdd from '../pages/admin/blog/Add';
+import BlogEdit from '../pages/admin/blog/Edit';
+import TrendingCryptoList from '../pages/admin/crypto/List';
+import TrendingCryptoAdd from '../pages/admin/crypto/Add';
+import TrendingCryptoEdit from '../pages/admin/crypto/Edit';
 
 const Dashboard = lazy(() => import('../pages/admin/Dashboard'));
 const ProductList = lazy(() => import('../pages/admin/Products/List'));
@@ -16,13 +22,19 @@ const Orders = lazy(() => import('../pages/admin/Orders'));
 const Users = lazy(() => import('../pages/admin/Users'));
 const Settings = lazy(() => import('../pages/admin/Settings'));
 const Login = lazy(() => import('../pages/admin/Login'));
+const ForgotPassword = lazy(() => import('../pages/admin/ForgotPassword'));
+
+// const BlogList = lazy(() => import('../pages/admin/Blog/List'));
+// const BlogAdd = lazy(() => import('../pages/admin/Blog/Add'));
+// const BlogEdit = lazy(() => import('../pages/admin/Blog/Edit'));
 
 const AdminRoutes = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="login" element={<Login />} />
-        
+        <Route path="forgot-password" element={<ForgotPassword />} />
+
         {/* Routes protégées */}
         <Route
           element={
@@ -35,6 +47,22 @@ const AdminRoutes = () => {
           <Route path="products" element={<ProductList />} />
           <Route path="products/add" element={<ProductAdd />} />
           <Route path="products/edit/:id" element={<ProductEdit />} />
+
+          <Route path="blog" element={<BlogList />} />
+          <Route path="blog/add" element={<BlogAdd />} />
+          <Route path="blog/edit/:id" element={<BlogEdit />} />
+
+
+          <Route path="trending-cryptos" element={<TrendingCryptoList />} />
+          <Route path="trending-cryptos/add" element={<TrendingCryptoAdd />} />
+          <Route path="trending-cryptos/edit/:id" element={<TrendingCryptoEdit />} />
+
+
+          <Route path="/admin/testimonials" element={<TestimonialList />} />
+          <Route path="/admin/testimonials/add" element={<TestimonialAdd />} />
+          <Route path="/admin/testimonials/edit/:id" element={<TestimonialEdit />} />
+
+
           <Route path="services" element={<ServiceList />} />
           <Route path="services/add" element={<ServiceAdd />} />
           <Route path="services/edit/:id" element={<ServiceEdit />} />

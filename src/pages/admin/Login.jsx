@@ -1,3 +1,4 @@
+// src/pages/admin/Login.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -26,8 +27,27 @@ const Login = () => {
         toast.error('Identifiants incorrects');
       }
     } catch (error) {
-      toast.error('Une erreur est survenue');
-      console.error('Login error:', error);
+      let errorMessage = 'Une erreur est survenue';
+      
+      // Gestion des erreurs spécifiques de Firebase
+      switch (error.code) {
+        case 'auth/invalid-email':
+          errorMessage = 'Email invalide';
+          break;
+        case 'auth/user-disabled':
+          errorMessage = 'Ce compte a été désactivé';
+          break;
+        case 'auth/user-not-found':
+          errorMessage = 'Aucun compte trouvé avec cet email';
+          break;
+        case 'auth/wrong-password':
+          errorMessage = 'Mot de passe incorrect';
+          break;
+        default:
+          console.error('Login error:', error);
+      }
+      
+      toast.error(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -127,7 +147,7 @@ const Login = () => {
               </div>
 
               <div className="text-sm">
-                <a href="#" className="font-medium text-primary-600 hover:text-primary-500">
+                <a href="forgot-password" className="font-medium text-primary-600 hover:text-primary-500">
                   Mot de passe oublié?
                 </a>
               </div>

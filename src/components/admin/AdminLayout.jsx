@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { FaTachometerAlt, FaBox, FaShoppingCart, FaUsers, FaCog, FaSignOutAlt } from 'react-icons/fa';
+import { FaTachometerAlt, FaBox, FaShoppingCart, FaUsers, FaCog, FaSignOutAlt, FaBlog, FaCheck } from 'react-icons/fa';
 import { useAuth } from '../../contexts/AuthContext';
+import { SiCryptpad } from 'react-icons/si';
 
 const AdminLayout = () => {
   const { user, logout } = useAuth();
@@ -11,9 +12,12 @@ const AdminLayout = () => {
   const navItems = [
     { path: '/admin', icon: <FaTachometerAlt />, label: 'Tableau de bord' },
     { path: '/admin/products', icon: <FaBox />, label: 'Produits' },
-    { path: '/admin/services', icon: <FaShoppingCart />, label: 'Services' },
+    { path: '/admin/blog', icon: <FaBlog />, label: 'Blog' },
+    { path: '/admin/trending-cryptos', icon: <SiCryptpad />, label: 'Cryptos' },
+    // { path: '/admin/services', icon: <FaShoppingCart />, label: 'Services' },
     { path: '/admin/users', icon: <FaUsers />, label: 'Utilisateurs' },
-    { path: '/admin/settings', icon: <FaCog />, label: 'Paramètres' }
+    // { path: '/admin/settings', icon: <FaCog />, label: 'Paramètres' },
+    { path: '/admin/verification', icon: <FaCheck />, label: 'Compte Verifiés' }
   ];
 
   return (

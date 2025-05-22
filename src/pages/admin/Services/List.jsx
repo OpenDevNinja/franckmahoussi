@@ -1,42 +1,71 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaEdit, FaTrash, FaPlus } from 'react-icons/fa';
-import { services } from '../../../data/services';
+import { FaEdit, FaTrash, FaPlus, FaSearch, FaStar } from 'react-icons/fa';
+import { collection, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { db } from '../../../../firebase';
 
 const ServiceList = () => {
-  const [serviceList, setServiceList] = useState([]);
+  const [services, setServices] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setServiceList(services);
+    const fetchServices = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, 'services'));
+        const servicesData = querySnapshot.docs.map(doc => ({
+          id: doc.id,
+          title: doc.data().title || '',
+          description: doc.data().description || '',
+          price: doc.data().price || 0,
+          duration: doc.data().duration || '',
+          format: doc.data().format || '',
+          images: doc.data().images || [],
+          features: doc.data().features || [],
+          rating: doc.data().rating || 0,
+          category: doc.data().category || '',
+          ...doc.data()
+        }));
+        setServices(servicesData);
+      } catch (error) {
+        console.error("Erreur lors du chargement des services:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchServices();
   }, []);
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     if (window.confirm('Êtes-vous sûr de vouloir supprimer ce service ?')) {
-      setServiceList(serviceList.filter(service => service.id !== id));
-      // Ici, vous feriez normalement une requête API pour supprimer le service
+      try {
+        await deleteDoc(doc(db, 'services', id));
+        setServices(services.filter(service => service.id !== id));
+      } catch (error) {
+        console.error("Erreur lors de la suppression:", error);
+      }
     }
   };
 
-  const filteredServices = serviceList.filter(service =>
-    service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    service.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredServices = services.filter(service => {
+    const title = service.title?.toLowerCase() || '';
+    const category = service.category?.toLowerCase() || '';
+    const term = searchTerm.toLowerCase();
+    
+    return title.includes(term) || category.includes(term);
+  });
 
-  const getCategoryLabel = (category) => {
-    switch (category) {
-      case 'formation':
-        return 'Formation';
-      case 'livraison':
-        return 'Livraison';
-      case 'stockage':
-        return 'Stockage';
-      case 'consultation':
-        return 'Consultation';
-      default:
-        return 'Service';
-    }
+  const renderStars = (rating) => {
+    return Array(5).fill(0).map((_, i) => (
+      <FaStar 
+        key={i} 
+        className={i < rating ? "text-yellow-400" : "text-gray-300"} 
+      />
+    ));
   };
+
+  if (loading) return <div className="p-6">Chargement...</div>;
 
   return (
     <div className="p-6">
@@ -55,9 +84,7 @@ const ServiceList = () => {
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <svg className="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-              </svg>
+              <FaSearch className="h-5 w-5 text-gray-400" />
             </div>
             <input
               type="text"
@@ -83,9 +110,6 @@ const ServiceList = () => {
                   Prix
                 </th>
                 <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Durée
-                </th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Note
                 </th>
                 <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -94,50 +118,65 @@ const ServiceList = () => {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {filteredServices.map((service) => (
-                <tr key={service.id}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10">
-                        <img className="h-10 w-10 rounded-full object-cover" src={service.image} alt={service.title} />
+              {filteredServices.length > 0 ? (
+                filteredServices.map((service) => (
+                  <tr key={service.id}>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-10 w-10">
+                          {service.images && service.images.length > 0 ? (
+                            <img 
+                              className="h-10 w-10 rounded-full object-cover" 
+                              src={service.images[0]} 
+                              alt={service.title} 
+                            />
+                          ) : (
+                            <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
+                              <span className="text-gray-500 text-xs">Aucune image</span>
+                            </div>
+                          )}
+                        </div>
+                        <div className="ml-4">
+                          <div className="text-sm font-medium text-gray-900">{service.title}</div>
+                          <div className="text-sm text-gray-500 line-clamp-1">{service.description}</div>
+                        </div>
                       </div>
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">{service.title}</div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {service.category}
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      {service.price.toFixed(2)} €
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        {renderStars(service.rating)}
+                        <span className="ml-1 text-sm text-gray-500">({service.rating})</span>
                       </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                      {getCategoryLabel(service.category)}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {service.price}€
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {service.duration}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                      {service.rating}/5
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <Link
-                      to={`/admin/services/edit/${service.id}`}
-                      className="text-primary-600 hover:text-primary-900 mr-4"
-                    >
-                      <FaEdit />
-                    </Link>
-                    <button
-                      onClick={() => handleDelete(service.id)}
-                      className="text-red-600 hover:text-red-900"
-                    >
-                      <FaTrash />
-                    </button>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      <Link
+                        to={`/admin/services/edit/${service.id}`}
+                        className="text-primary-600 hover:text-primary-900 mr-4 inline-block"
+                      >
+                        <FaEdit />
+                      </Link>
+                      <button
+                        onClick={() => handleDelete(service.id)}
+                        className="text-red-600 hover:text-red-900 inline-block"
+                      >
+                        <FaTrash />
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="5" className="px-6 py-4 text-center text-sm text-gray-500">
+                    Aucun service trouvé
                   </td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
