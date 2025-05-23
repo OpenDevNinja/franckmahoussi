@@ -30,20 +30,20 @@ const ProductDetails = ({ product }) => {
                     />
                 </div>
                 <div className="grid grid-cols-4 gap-2">
-                    {[product.image, ...product.features.slice(0, 3).map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setSelectedImage(product.image)}
-                            className={`border rounded-md overflow-hidden ${selectedImage === product.image ? 'border-primary-600' : 'border-gray-200'}`}
-                        >
-                            <img
-                                src={product.image}
-                                alt={`Preview ${i + 1}`}
-                                className="w-full h-20 object-cover"
-                            />
-                        </button>
-                    ))]}
-                </div>
+  {Array(4).fill().map((_, i) => (
+    <button
+      key={i}
+      onClick={() => setSelectedImage(product.image)}
+      className={`border rounded-md overflow-hidden ${selectedImage === product.image ? 'border-primary-600' : 'border-gray-200'}`}
+    >
+      <img
+        src={product.image}
+        alt={`Preview ${i + 1}`}
+        className="w-full h-20 object-contain"
+      />
+    </button>
+  ))}
+</div>
             </div>
 
             <div>
@@ -58,7 +58,7 @@ const ProductDetails = ({ product }) => {
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg mb-6">
-                    <p className="text-2xl font-bold text-primary-600 mb-2">{product.price.toFixed(2)}€</p>
+                    <p className="text-2xl font-bold text-primary-600 mb-2">{product.price.toFixed(2)}XOF</p>
                     <p className="text-gray-600">{product.description}</p>
                 </div>
 

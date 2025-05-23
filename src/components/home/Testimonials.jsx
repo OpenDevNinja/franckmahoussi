@@ -42,7 +42,7 @@ const Testimonials = ({ testimonials }) => {
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 mb-4">"{testimonial.content}"</p>
+              <p className="text-gray-700 mb-4">{testimonial.content}</p>
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
                   <svg

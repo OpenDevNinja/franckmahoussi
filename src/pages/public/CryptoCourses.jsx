@@ -15,13 +15,13 @@ const CryptoCourses = () => {
   return (
     <div className="py-12 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-       
+
         <SectionHeader
-  title="Formations Cryptomonnaies "
-  subtitle="  Maîtrisez les cryptomonnaies avec nos formations expertes adaptées à tous les niveaux."
-  animationDelay={0.2}
-/>
-        
+          title="Formations Cryptomonnaies "
+          subtitle="  Maîtrisez les cryptomonnaies avec nos formations expertes adaptées à tous les niveaux."
+          animationDelay={0.2}
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cryptoCourses.map(course => (
             <motion.div
@@ -33,19 +33,19 @@ const CryptoCourses = () => {
               className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={course.image} 
+                <img
+                  src={course.image}
                   alt={course.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-semibold text-lg">{course.title}</h3>
-                  <span className="font-bold text-primary-600">{course.price}€</span>
+                  <span className="font-bold text-primary-600">{course.price}XOF</span>
                 </div>
-                
+
                 <div className="flex items-center mb-3">
                   <div className="flex text-yellow-400 mr-2">
                     {[...Array(5)].map((_, i) => (
@@ -61,9 +61,9 @@ const CryptoCourses = () => {
                   </div>
                   <span className="text-sm text-gray-500">({course.rating}) | {course.students} étudiants</span>
                 </div>
-                
+
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">{course.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                     {course.level}
@@ -72,10 +72,10 @@ const CryptoCourses = () => {
                     {course.duration}
                   </span>
                 </div>
-                
+
                 <div className="flex justify-between items-center">
-                  <a 
-                    href={`/services/${course.id}`} 
+                  <a
+                    href={`/services/${course.id}`}
                     className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                   >
                     Voir les détails

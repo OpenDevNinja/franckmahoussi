@@ -1,82 +1,30 @@
 export const testimonials = [
+  
     {
       id: 1,
-      name: "Marc Durand",
-      role: "Entrepreneur",
-      content: "Les formations crypto ont complètement transformé ma façon d'investir. Je recommande vivement!",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/men/32.jpg"
+      name: "Sophie DOSSOU",
+      role: "Comptable",
+      content: "Le processus de vérification de compte est rapide et efficace. Je me sens en sécurité avec mes investissements.",
+      rating: 4,
+      image: "data:image/png;base64,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"
     },
+   
     {
       id: 2,
-      name: "Sophie Martin",
-      role: "Designer",
-      content: "Service de livraison ultra rapide et professionnel. Mon colis est arrivé en parfait état.",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg"
-    },
-    {
-      id: 3,
-      name: "Thomas Lefevre",
-      role: "Développeur",
-      content: "Le cours sur les smart contracts est exceptionnel. J'ai pu créer mon premier contrat en une semaine!",
-      rating: 4,
-      image: "https://randomuser.me/api/portraits/men/75.jpg"
-    },
-    {
-      id: 4,
-      name: "Laura Petit",
-      role: "Artiste",
-      content: "Grâce à la formation NFT, j'ai pu vendre mes œuvres numériques avec un excellent retour.",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/women/63.jpg"
-    },
-    {
-      id: 5,
-      name: "Jean Dubois",
-      role: "Investisseur",
-      content: "L'audit de mon portefeuille crypto m'a permis d'optimiser mes investissements de 30%.",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/men/81.jpg"
-    },
-    {
-      id: 6,
       name: "Émilie Rousseau",
       role: "Consultante",
       content: "Le service d'emballage est top qualité. Mes objets fragiles sont toujours parfaitement protégés.",
       rating: 4,
-      image: "https://randomuser.me/api/portraits/women/25.jpg"
+      image: "data:image/png;base64,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"
     },
+ 
     {
-      id: 7,
-      name: "Nicolas Lambert",
-      role: "Trader",
-      content: "La formation trading avancé m'a appris des stratégies qui ont doublé mes performances.",
+      id: 3,
+      name: "Lucas Bernard",
+      role: "Entrepreneur",
+      content: "Le support client est réactif et efficace. Ils ont résolu mon problème en un rien de temps.",
       rating: 5,
-      image: "https://randomuser.me/api/portraits/men/22.jpg"
+      image: "data:image/png;base64,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" 
     },
-    {
-      id: 8,
-      name: "Claire Moreau",
-      role: "Professionnelle",
-      content: "Livraison internationale très fiable. J'utilise ce service régulièrement pour mon entreprise.",
-      rating: 4,
-      image: "https://randomuser.me/api/portraits/women/33.jpg"
-    },
-    {
-      id: 9,
-      name: "Patrick Chevalier",
-      role: "Retraité",
-      content: "Les explications sont claires même pour un débutant comme moi. J'ai enfin compris la blockchain!",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/men/91.jpg"
-    },
-    {
-      id: 10,
-      name: "Isabelle Lenoir",
-      role: "Manager",
-      content: "Service client exceptionnel. Ils ont résolu mon problème de livraison en moins d'une heure.",
-      rating: 5,
-      image: "https://randomuser.me/api/portraits/women/52.jpg"
-    }
+  
   ];

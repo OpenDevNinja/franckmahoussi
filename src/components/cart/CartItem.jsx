@@ -57,7 +57,7 @@ const CartItem = ({ item, onRemove, onUpdateQuantity }) => {
             </button>
           </div>
           
-          <span className="font-bold text-lg">{(item.price * item.quantity).toFixed(2)}€</span>
+          <span className="font-bold text-lg">{(item.price * item.quantity).toFixed(2)}XOF</span>
         </div>
       </div>
     </motion.div>

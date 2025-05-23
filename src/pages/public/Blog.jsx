@@ -49,7 +49,7 @@ export default function Blog() {
             </div>
           </div>
 
-          {/* Categories */}
+          {/* Categories
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {['Tous', 'Bitcoin', 'Ethereum', 'DeFi', 'NFT', 'Investissement'].map((category) => (
               <button
@@ -59,7 +59,7 @@ export default function Blog() {
                 {category}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Posts */}
           {filteredPosts.length > 0 ? (

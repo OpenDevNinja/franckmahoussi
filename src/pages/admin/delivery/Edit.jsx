@@ -23,7 +23,7 @@ const DeliveryOptionEdit = () => {
     const fetchOption = async () => {
       const docRef = doc(db, 'deliveryOptions', id);
       const docSnap = await getDoc(docRef);
-      
+
       if (docSnap.exists()) {
         const data = docSnap.data();
         setFormData({
@@ -39,7 +39,7 @@ const DeliveryOptionEdit = () => {
         navigate('/admin/delivery-options');
       }
     };
-    
+
     fetchOption();
   }, [id, navigate]);
 
@@ -97,7 +97,7 @@ const DeliveryOptionEdit = () => {
         </button>
         <h1 className="text-2xl font-bold">Modifier l'option de livraison</h1>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <form onSubmit={handleSubmit}>
           <div className="p-6 space-y-6">
@@ -116,7 +116,7 @@ const DeliveryOptionEdit = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="icon" className="block text-sm font-medium text-gray-700 mb-1">
                   Icône (emoji)
@@ -131,10 +131,10 @@ const DeliveryOptionEdit = () => {
                   placeholder="🚛"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-                  Prix (€)
+                  Prix (XOF)
                 </label>
                 <input
                   type="number"
@@ -148,7 +148,7 @@ const DeliveryOptionEdit = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="deliveryTime" className="block text-sm font-medium text-gray-700 mb-1">
                   Délai de livraison
@@ -164,7 +164,7 @@ const DeliveryOptionEdit = () => {
                   placeholder="3-5 jours"
                 />
               </div>
-              
+
               <div className="flex items-center">
                 <input
                   type="checkbox"
@@ -178,7 +178,7 @@ const DeliveryOptionEdit = () => {
                   Marquer comme recommandé
                 </label>
               </div>
-              
+
               <div className="md:col-span-2">
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
                   Description
@@ -193,7 +193,7 @@ const DeliveryOptionEdit = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 ></textarea>
               </div>
-              
+
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Caractéristiques
@@ -231,7 +231,7 @@ const DeliveryOptionEdit = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-gray-50 px-6 py-3 flex justify-end border-t border-gray-200">
             <button
               type="submit"

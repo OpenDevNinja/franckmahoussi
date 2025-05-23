@@ -68,7 +68,7 @@ const DeliveryOptionCard = ({ option }) => {
           <div className="mt-2 flex justify-between items-center">
             <span className="text-sm font-medium text-gray-500">A partir de :</span>
             <span className="text-xl font-bold text-secondary">
-              {option.price.toFixed(2)} FCFA
+              {option.price.toFixed(2)} XOF
             </span>
           </div>
         </div>

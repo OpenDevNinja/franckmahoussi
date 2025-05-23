@@ -89,26 +89,9 @@ export const products = [
       ],
       deliveryOptions: ["standard"]
     },
+  
     {
       id: 6,
-      name: "Clavier Mécanique Gaming",
-      description: "Clavier mécanique RGB avec switches personnalisables et anti-ghosting.",
-      price: 119.99,
-      category: "Accessoires",
-      image: "https://images.unsplash.com/photo-1551380878-c3e51a8db2a8",
-      rating: 4.7,
-      stock: 12,
-      features: [
-        "Switches mécaniques",
-        "Rétroéclairage RGB",
-        "Anti-ghosting N-key",
-        "Câble détachable",
-        "Repose-poignets ergonomique"
-      ],
-      deliveryOptions: ["standard", "express"]
-    },
-    {
-      id: 7,
       name: "Souris Ergonomique",
       description: "Souris sans fil ergonomique avec précision de 16000 DPI.",
       price: 79.99,
@@ -126,7 +109,7 @@ export const products = [
       deliveryOptions: ["standard"]
     },
     {
-      id: 8,
+      id: 7,
       name: "Disque Dur Externe 2TB",
       description: "Disque dur portable USB 3.0 avec cryptage matériel.",
       price: 89.99,
@@ -144,7 +127,7 @@ export const products = [
       deliveryOptions: ["standard", "express"]
     },
     {
-      id: 9,
+      id: 8,
       name: "SSD NVMe 1TB",
       description: "SSD ultra-rapide avec vitesses de lecture/écriture jusqu'à 3500MB/s.",
       price: 129.99,
@@ -162,7 +145,7 @@ export const products = [
       deliveryOptions: ["standard", "express", "same-day"]
     },
     {
-      id: 10,
+      id: 9,
       name: "Station d'Accueil USB-C",
       description: "Hub USB-C avec 8 ports pour une connectivité étendue.",
       price: 59.99,

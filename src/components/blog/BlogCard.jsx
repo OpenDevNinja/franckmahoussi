@@ -40,7 +40,7 @@ export default function BlogCard({ post, index }) {
           {post.title}
         </Link>
         <p className="text-neutral-600 mb-4 line-clamp-3">{post.excerpt}</p>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <img
             className="w-10 h-10 rounded-full object-cover mr-3"
             src={post.authorAvatar}
@@ -50,7 +50,7 @@ export default function BlogCard({ post, index }) {
             <p className="font-medium text-primary">{post.author}</p>
             <p className="text-sm text-gray-500">Expert Crypto</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );

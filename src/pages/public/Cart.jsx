@@ -11,22 +11,22 @@ const Cart = () => {
     document.title = "Panier | F M Services";
   }, []);
 
-  const { 
-    cart, 
-    removeFromCart, 
-    updateQuantity, 
-    setDeliveryOption, 
-    cartTotal, 
-    deliveryCost, 
-    grandTotal 
+  const {
+    cart,
+    removeFromCart,
+    updateQuantity,
+    setDeliveryOption,
+    cartTotal,
+    deliveryCost,
+    grandTotal
   } = useCart();
 
   const handleWhatsAppRedirect = () => {
     const phoneNumber = "+22940302244"; // Remplacez par votre numéro WhatsApp
-    const message = `Bonjour, je souhaite passer commande:\n\n${cart.items.map(item => 
-      `- ${item.name} (x${item.quantity}): ${item.price * item.quantity}€`
-    ).join('\n')}\n\nTotal: ${grandTotal}€\n\nLivraison: ${cart.delivery?.name || 'Non sélectionnée'}`;
-    
+    const message = `Bonjour, je souhaite passer commande:\n\n${cart.items.map(item =>
+      `- ${item.name} (x${item.quantity}): ${item.price * item.quantity}XOF`
+    ).join('\n')}\n\nTotal: ${grandTotal}XOF\n\nLivraison: ${cart.delivery?.name || 'Non sélectionnée'}`;
+
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -43,7 +43,7 @@ const Cart = () => {
       className="container mx-auto px-4 py-12"
     >
       <h1 className="text-3xl font-bold mb-8">Votre Panier</h1>
-      
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-6">
           {cart.items.map(item => (
@@ -55,9 +55,9 @@ const Cart = () => {
             />
           ))}
         </div>
-        
+
         <div className="lg:col-span-1">
-          <CartSummary 
+          <CartSummary
             cartTotal={cartTotal}
             deliveryCost={deliveryCost}
             grandTotal={grandTotal}

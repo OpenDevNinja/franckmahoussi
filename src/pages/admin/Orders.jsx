@@ -56,7 +56,7 @@ const Orders = () => {
   const [statusFilter, setStatusFilter] = useState('all');
 
   const filteredOrders = mockOrders.filter(order => {
-    const matchesSearch = 
+    const matchesSearch =
       order.customer.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.id.toString().includes(searchTerm);
     const matchesStatus = statusFilter === 'all' || order.status === statusFilter;
@@ -81,7 +81,7 @@ const Orders = () => {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Gestion des Commandes</h1>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden mb-6">
         <div className="p-4 border-b border-gray-200">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,7 +97,7 @@ const Orders = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
-            
+
             <div>
               <select
                 value={statusFilter}
@@ -113,7 +113,7 @@ const Orders = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -153,14 +153,14 @@ const Orders = () => {
                       <ul className="list-disc pl-5">
                         {order.items.map((item, index) => (
                           <li key={index}>
-                            {item.name} (x{item.quantity}) - {item.price}€
+                            {item.name} (x{item.quantity}) - {item.price}XOF
                           </li>
                         ))}
                       </ul>
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    {order.total}€
+                    {order.total}XOF
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(order.status)}`}>

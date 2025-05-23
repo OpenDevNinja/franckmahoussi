@@ -100,13 +100,13 @@ const Header = () => {
                 </span>
               )}
             </Link>
-            <Link 
+            {/* <Link 
               to="/admin" 
               className="hidden md:flex items-center space-x-1 p-2 text-dark-700 hover:text-primary-600 transition-colors"
             >
               <FaUser className="text-xl" />
               <span>Admin</span>
-            </Link>
+            </Link> */}
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2 text-dark-700 hover:text-primary-600 transition-colors"

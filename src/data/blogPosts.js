@@ -47,7 +47,7 @@ export const blogPosts = [
     author: "Thomas Martin",
     authorAvatar: "https://randomuser.me/api/portraits/men/75.jpg"
   },
-  {
+/*   {
     id: 4,
     title: "NFT: Comprendre la révolution des jetons non fongibles",
     slug: "nft-revolution-jettons",
@@ -79,5 +79,5 @@ export const blogPosts = [
     date: "20 avril 2023",
     author: "Pierre Lefèvre",
     authorAvatar: "https://randomuser.me/api/portraits/men/91.jpg"
-  }
+  } */
 ];

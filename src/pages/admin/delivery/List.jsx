@@ -31,7 +31,7 @@ const DeliveryOptionList = () => {
         setLoading(false);
       }
     };
-    
+
     fetchOptions();
   }, []);
 
@@ -66,7 +66,7 @@ const DeliveryOptionList = () => {
           Ajouter une option
         </Link>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden mb-6">
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
@@ -82,7 +82,7 @@ const DeliveryOptionList = () => {
             />
           </div>
         </div>
-        
+
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -125,7 +125,7 @@ const DeliveryOptionList = () => {
                       <div className="text-sm text-gray-500">{option.description}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {option.price.toFixed(2)} €
+                      {option.price.toFixed(2)} XOF
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {option.deliveryTime}

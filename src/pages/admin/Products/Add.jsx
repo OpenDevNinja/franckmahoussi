@@ -89,7 +89,7 @@ const ProductAdd = () => {
         </button>
         <h1 className="text-2xl font-bold">Ajouter un produit</h1>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <form onSubmit={handleSubmit}>
           <div className="p-6 space-y-6">
@@ -108,10 +108,10 @@ const ProductAdd = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
-                  Prix (€)
+                  Prix (XOF)
                 </label>
                 <input
                   type="number"
@@ -125,7 +125,7 @@ const ProductAdd = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
                   Catégorie
@@ -153,7 +153,7 @@ const ProductAdd = () => {
                   </button>
                 </div>
               </div>
-              
+
               <div>
                 <label htmlFor="stock" className="block text-sm font-medium text-gray-700 mb-1">
                   Stock disponible
@@ -169,7 +169,7 @@ const ProductAdd = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-1">
                   Note (0-5)
@@ -187,7 +187,7 @@ const ProductAdd = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
                 />
               </div>
-              
+
               <div className="md:col-span-2">
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Liens des images (un par ligne)
@@ -208,7 +208,7 @@ const ProductAdd = () => {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
                 Description
@@ -223,7 +223,7 @@ const ProductAdd = () => {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition"
               ></textarea>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Caractéristiques
@@ -260,7 +260,7 @@ const ProductAdd = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="bg-gray-50 px-6 py-3 flex justify-end border-t border-gray-200">
             <button
               type="submit"
@@ -277,7 +277,7 @@ const ProductAdd = () => {
           </div>
         </form>
       </div>
-      
+
       {showCategoryModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-md">

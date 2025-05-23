@@ -23,7 +23,7 @@ export const deliveryOptions = [
     icon: "✈️",
     recommended: true,
     features: [
-     
+
       "Assurance 100%",
       "Livraison à domicile",
       "Emballage renforcé",
@@ -46,33 +46,33 @@ export const deliveryOptions = [
       "Emballage premium"
     ]
   },
-/*   {
-    id: 4,
-    name: "International Standard",
-    description: "Livraison économique à l'international",
-    price: 24.99,
-    deliveryTime: "7-10 jours",
-    icon: "🌍",
-    features: [
-      "Suivi international",
-      "Dédouanement inclus",
-      "Assurance jusqu'à 200€",
-      "Documents d'export fournis"
-    ]
-  },
-  {
-    id: 5,
-    name: "International Express",
-    description: "Livraison rapide à l'international",
-    price: 49.99,
-    deliveryTime: "3-5 jours",
-    icon: "🚀",
-    features: [
-      "Suivi prioritaire 24/7",
-      "Dédouanement accéléré",
-      "Assurance jusqu'à 1000€",
-      "Service client international",
-      "Documents d'export premium"
-    ]
-  } */
+  /*   {
+      id: 4,
+      name: "International Standard",
+      description: "Livraison économique à l'international",
+      price: 24.99,
+      deliveryTime: "7-10 jours",
+      icon: "🌍",
+      features: [
+        "Suivi international",
+        "Dédouanement inclus",
+        "Assurance jusqu'à 200XOF",
+        "Documents d'export fournis"
+      ]
+    },
+    {
+      id: 5,
+      name: "International Express",
+      description: "Livraison rapide à l'international",
+      price: 49.99,
+      deliveryTime: "3-5 jours",
+      icon: "🚀",
+      features: [
+        "Suivi prioritaire 24/7",
+        "Dédouanement accéléré",
+        "Assurance jusqu'à 1000XOF",
+        "Service client international",
+        "Documents d'export premium"
+      ]
+    } */
 ];

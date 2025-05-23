@@ -47,7 +47,7 @@ const Filters = ({ categories, onFilter }) => {
         <FaFilter className="mr-2" />
         Filtres
       </button>
-      
+
       {/* Mobile Filters */}
       {isOpen && (
         <div className="fixed inset-0 z-50 overflow-y-auto">
@@ -67,7 +67,7 @@ const Filters = ({ categories, onFilter }) => {
                     <FaTimes />
                   </button>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-medium mb-2">Prix</h4>
@@ -81,12 +81,12 @@ const Filters = ({ categories, onFilter }) => {
                         className="w-full"
                       />
                       <div className="flex justify-between mt-2">
-                        <span>0€</span>
-                        <span>{priceRange[1]}€</span>
+                        <span>0XOF</span>
+                        <span>{priceRange[1]}XOF</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-medium mb-2">Catégories</h4>
                     <div className="space-y-2">
@@ -103,7 +103,7 @@ const Filters = ({ categories, onFilter }) => {
                       ))}
                     </div>
                   </div>
-                  
+
                   <div>
                     <h4 className="font-medium mb-2">Note minimale</h4>
                     <div className="flex items-center space-x-2">
@@ -122,7 +122,7 @@ const Filters = ({ categories, onFilter }) => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   onClick={handleApplyFilters}

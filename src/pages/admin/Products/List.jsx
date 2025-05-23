@@ -30,7 +30,7 @@ const ProductList = () => {
         setLoading(false);
       }
     };
-    
+
     fetchProducts();
   }, []);
 
@@ -49,7 +49,7 @@ const ProductList = () => {
     const name = product.name?.toLowerCase() || '';
     const category = product.category?.toLowerCase() || '';
     const term = searchTerm.toLowerCase();
-    
+
     return name.includes(term) || category.includes(term);
   });
 
@@ -66,7 +66,7 @@ const ProductList = () => {
           Ajouter un produit
         </Link>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden mb-6">
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
@@ -82,7 +82,7 @@ const ProductList = () => {
             />
           </div>
         </div>
-        
+
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -115,10 +115,10 @@ const ProductList = () => {
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
                           {product.images && product.images.length > 0 ? (
-                            <img 
-                              className="h-10 w-10 rounded-full object-cover" 
-                              src={product.images[0]} 
-                              alt={product.name} 
+                            <img
+                              className="h-10 w-10 rounded-full object-cover"
+                              src={product.images[0]}
+                              alt={product.name}
                             />
                           ) : (
                             <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
@@ -135,17 +135,16 @@ const ProductList = () => {
                       {product.category || 'Non catégorisé'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {product.price}€
+                      {product.price}XOF
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {product.stock}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                        product.rating >= 4 ? 'bg-green-100 text-green-800' : 
-                        product.rating >= 2 ? 'bg-yellow-100 text-yellow-800' : 
-                        'bg-red-100 text-red-800'
-                      }`}>
+                      <span className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${product.rating >= 4 ? 'bg-green-100 text-green-800' :
+                          product.rating >= 2 ? 'bg-yellow-100 text-yellow-800' :
+                            'bg-red-100 text-red-800'
+                        }`}>
                         {product.rating}/5
                       </span>
                     </td>

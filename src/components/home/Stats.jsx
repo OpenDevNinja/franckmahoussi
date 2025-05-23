@@ -4,19 +4,19 @@ import SectionHeader from './SectionHeader';
 
 const stats = [
   { 
-    value: "10,000+", 
+    value: "1,000+", 
     label: "Produits Vendus", 
     icon: <FaBoxOpen />,
     color: "from-secondary-400 to-secondary-500"
   },
   { 
-    value: "5,000+", 
+    value: "500+", 
     label: "Clients Satisfaits", 
     icon: <FaUsers />,
     color: "from-accent-300 to-accent-500"
   },
   { 
-    value: "98%", 
+    value: "99%", 
     label: "Satisfaction Client", 
     icon: <FaSmile />,
     color: "from-primary-300 to-primary-400"

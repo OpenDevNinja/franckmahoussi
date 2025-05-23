@@ -33,7 +33,7 @@ const ServiceList = () => {
         setLoading(false);
       }
     };
-    
+
     fetchServices();
   }, []);
 
@@ -52,15 +52,15 @@ const ServiceList = () => {
     const title = service.title?.toLowerCase() || '';
     const category = service.category?.toLowerCase() || '';
     const term = searchTerm.toLowerCase();
-    
+
     return title.includes(term) || category.includes(term);
   });
 
   const renderStars = (rating) => {
     return Array(5).fill(0).map((_, i) => (
-      <FaStar 
-        key={i} 
-        className={i < rating ? "text-yellow-400" : "text-gray-300"} 
+      <FaStar
+        key={i}
+        className={i < rating ? "text-yellow-400" : "text-gray-300"}
       />
     ));
   };
@@ -79,7 +79,7 @@ const ServiceList = () => {
           Ajouter un service
         </Link>
       </div>
-      
+
       <div className="bg-white rounded-lg shadow overflow-hidden mb-6">
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
@@ -95,7 +95,7 @@ const ServiceList = () => {
             />
           </div>
         </div>
-        
+
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead className="bg-gray-50">
@@ -125,10 +125,10 @@ const ServiceList = () => {
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
                           {service.images && service.images.length > 0 ? (
-                            <img 
-                              className="h-10 w-10 rounded-full object-cover" 
-                              src={service.images[0]} 
-                              alt={service.title} 
+                            <img
+                              className="h-10 w-10 rounded-full object-cover"
+                              src={service.images[0]}
+                              alt={service.title}
                             />
                           ) : (
                             <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
@@ -146,7 +146,7 @@ const ServiceList = () => {
                       {service.category}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {service.price.toFixed(2)} €
+                      {service.price.toFixed(2)} XOF
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">

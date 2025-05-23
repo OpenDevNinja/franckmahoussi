@@ -10,6 +10,14 @@ import BlogEdit from '../pages/admin/blog/Edit';
 import TrendingCryptoList from '../pages/admin/crypto/List';
 import TrendingCryptoAdd from '../pages/admin/crypto/Add';
 import TrendingCryptoEdit from '../pages/admin/crypto/Edit';
+import TestimonialList from '../pages/admin/testimonial/List';
+import TestimonialAdd from '../pages/admin/testimonial/Add';
+import TestimonialEdit from '../pages/admin/testimonial/Edit';
+import DeliveryOptionList from '../pages/admin/delivery/List';
+import DeliveryOptionAdd from '../pages/admin/delivery/Add';
+import DeliveryOptionEdit from '../pages/admin/delivery/Edit';
+import VerificationList from '../pages/admin/verification/List';
+import VerificationDetail from '../pages/admin/verification/detail';
 
 const Dashboard = lazy(() => import('../pages/admin/Dashboard'));
 const ProductList = lazy(() => import('../pages/admin/Products/List'));
@@ -58,16 +66,32 @@ const AdminRoutes = () => {
           <Route path="trending-cryptos/edit/:id" element={<TrendingCryptoEdit />} />
 
 
-          <Route path="/admin/testimonials" element={<TestimonialList />} />
-          <Route path="/admin/testimonials/add" element={<TestimonialAdd />} />
-          <Route path="/admin/testimonials/edit/:id" element={<TestimonialEdit />} />
+          <Route path="testimonials" element={<TestimonialList />} />
+          <Route path="testimonials/add" element={<TestimonialAdd />} />
+          <Route path="testimonials/edit/:id" element={<TestimonialEdit />} />
+
+
+
+          <Route path="delivery-options" element={<DeliveryOptionList />} />
+          <Route path="delivery-options/add" element={<DeliveryOptionAdd />} />
+          <Route path="delivery-options/edit/:id" element={<DeliveryOptionEdit />} />
 
 
           <Route path="services" element={<ServiceList />} />
           <Route path="services/add" element={<ServiceAdd />} />
           <Route path="services/edit/:id" element={<ServiceEdit />} />
+
+
+          <Route path="services" element={<ServiceList />} />
+          <Route path="services/add" element={<ServiceAdd />} />
+          <Route path="services/edit/:id" element={<ServiceEdit />} />
+
+          <Route path="verification" element={<VerificationList />} />
+          <Route path="verifications/:id" element={<VerificationDetail />} />
+
+
           <Route path="orders" element={<Orders />} />
-          <Route path="users" element={<Users />} />
+          {/* <Route path="users" element={<Users />} /> */}
           <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>

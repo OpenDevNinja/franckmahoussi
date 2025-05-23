@@ -90,7 +90,7 @@ const Home = () => {
               Voir nos produits
             </a>
             <a 
-              href="/services" 
+              href="/delivery" 
               className="bg-secondary-600 hover:bg-secondary-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Découvrir nos services
